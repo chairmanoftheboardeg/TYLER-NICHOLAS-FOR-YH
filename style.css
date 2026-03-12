@@ -1,0 +1,253 @@
+/* Base Styles & Campaign Colors */
+:root {
+    --campaign-blue: #0A3161;
+    --campaign-red: #B31942;
+    --dark-text: #112233;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark-text);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--campaign-blue);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Merriweather', serif;
+}
+
+.vote-logo {
+    color: var(--white);
+    font-weight: bold;
+}
+
+.check {
+    color: var(--campaign-red);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--campaign-red);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background-color: var(--light-bg);
+    padding: 4rem 5% 0 5%;
+    overflow: hidden;
+    border-bottom: 5px solid var(--campaign-red);
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/041/930/966/non_2x/flat-illustration-of-seychelles-national-flag-seychelles-flag-design-seychelles-wave-flag-free-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.05; /* Keeps it very faint like the Capitol building reference */
+    z-index: 1;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.text-blue { color: var(--campaign-blue); }
+.text-red { color: var(--campaign-red); }
+
+.hero-text h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.slogan-box {
+    border-left: 4px solid var(--campaign-red);
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.slogan-box p {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--campaign-blue);
+    font-weight: 600;
+}
+
+.signature {
+    max-width: 200px;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--campaign-red);
+    color: var(--white);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--campaign-blue);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.candidate-photo {
+    max-width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Principles Section */
+.principles-section {
+    padding: 5rem 5%;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.principles-section h3 {
+    font-size: 2.5rem;
+    color: var(--campaign-blue);
+    margin-bottom: 3rem;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--light-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    border-top: 4px solid var(--campaign-blue);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.card h4 {
+    font-size: 1.3rem;
+    color: var(--campaign-red);
+    margin-bottom: 1rem;
+    font-family: 'Merriweather', serif;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+    }
+
+    .slogan-box {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .signature {
+        margin: 0 auto 2rem auto;
+    }
+
+    .hero-image {
+        justify-content: center;
+    }
+
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+}
