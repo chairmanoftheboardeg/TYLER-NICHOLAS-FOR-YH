@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Specific tweaks for the Volunteer Page layout */
         .volunteer-header {
             position: relative;
             padding: 7rem 5% 5rem 5%;
@@ -53,100 +52,125 @@
         .volunteer-container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 5rem 5%;
+            padding: 4rem 5%;
         }
 
-        .pitch-section {
+        /* Eligibility Alert Box */
+        .eligibility-box {
+            background-color: #061129;
+            border-left: 5px solid var(--campaign-red);
+            padding: 2.5rem;
+            margin-bottom: 4rem;
+            border-radius: 4px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .eligibility-box h2 {
+            color: var(--campaign-red);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .eligibility-box p {
+            font-size: 1.15rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .eligibility-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .eligibility-list li {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .eligibility-list li::before {
+            content: '✓';
+            color: var(--campaign-red);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Starter Kit Section */
+        .kit-section {
             text-align: center;
             margin-bottom: 4rem;
         }
 
-        .pitch-section h2 {
+        .kit-section h2 {
             font-size: 2.2rem;
             color: var(--white);
             margin-bottom: 1.5rem;
         }
 
-        .pitch-section p {
+        .kit-section p {
             font-size: 1.15rem;
             color: var(--text-light);
             line-height: 1.8;
             max-width: 800px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .kit-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            text-align: left;
+            align-items: center;
+        }
+
+        .poster-preview img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+            display: block;
             margin: 0 auto;
         }
 
-        .roles-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-bottom: 5rem;
-        }
-
-        .role-card {
-            background-color: var(--card-bg);
-            padding: 2.5rem 2rem;
-            border-radius: 8px;
+        .poster-instructions {
             text-align: center;
-            border-top: 4px solid var(--campaign-red);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .role-card h3 {
-            font-size: 1.4rem;
-            color: var(--white);
-            margin-bottom: 1rem;
-        }
-
-        .role-card p {
+            margin-top: 1rem;
+            font-size: 0.9rem;
             color: var(--text-light);
-            font-size: 1rem;
-            line-height: 1.6;
+            font-style: italic;
         }
 
-        .action-box {
-            background-color: #061129;
-            padding: 4rem 2rem;
-            text-align: center;
+        .caption-box {
+            background-color: var(--card-bg);
+            padding: 2rem;
             border-radius: 8px;
             border: 1px solid rgba(255,255,255,0.1);
         }
 
-        .action-box h2 {
-            font-size: 2rem;
-            color: var(--campaign-red);
-            margin-bottom: 1rem;
-        }
-
-        .action-box p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            margin-bottom: 2rem;
-        }
-
-        .btn-massive {
-            display: inline-block;
-            background-color: var(--campaign-red);
+        .caption-box h3 {
             color: var(--white);
-            padding: 1.2rem 3rem;
-            text-decoration: none;
-            font-weight: 800;
-            border-radius: 4px;
+            margin-bottom: 1rem;
             font-size: 1.3rem;
-            text-transform: uppercase;
-            transition: transform 0.2s, background-color 0.3s;
-            box-shadow: 0 5px 15px rgba(230, 0, 38, 0.4);
         }
 
-        .btn-massive:hover {
-            background-color: #cc0022;
-            transform: translateY(-3px);
+        .caption-text {
+            background-color: #030814;
+            padding: 1.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #4CAF50; /* Green text to look like code/copy area */
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            user-select: all; /* Makes it easy to copy on click */
         }
 
         @media (max-width: 768px) {
             .volunteer-header h1 {
                 font-size: 2.8rem;
             }
-            .roles-grid {
+            .kit-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -170,38 +194,49 @@
     <header class="volunteer-header">
         <div class="hero-bg"></div>
         <div class="header-content">
-            <h1>Join the Movement</h1>
+            <h1>Take Action</h1>
             <p>Become a Campaign Ambassador today.</p>
         </div>
     </header>
 
     <section class="volunteer-container">
         
-        <div class="pitch-section">
-            <h2>I Cannot Do This Alone.</h2>
-            <p>A true grassroots campaign is built by the people it aims to serve. If we want to bring real youth empowerment, skill development, and strong local leadership to the 21st Cohort of the Seychelles National Youth Assembly, we need a team willing to put in the work.</p>
+        <div class="eligibility-box">
+            <h2>Who Can Vote?</h2>
+            <p>Every single voice matters in this movement, but the official voting rules for the 21st Cohort of the Seychelles National Youth Assembly are strict. To cast a ballot for Tyler Nicholas, you must meet <strong>all three</strong> of the following requirements:</p>
+            <ul class="eligibility-list">
+                <li>You must be a Seychellois citizen.</li>
+                <li>You must be a student at École Française des Seychelles (EFS).</li>
+                <li>You must be in 3ème, 2nde, 1ère, or Terminale.</li>
+            </ul>
+            <p style="margin-top: 1.5rem; font-style: italic; color: var(--text-light); font-size: 1rem;">*Even if you cannot legally vote, you can still be a vital Campaign Ambassador by sharing our message and convincing eligible EFS students to support the campaign!</p>
         </div>
 
-        <div class="roles-grid">
-            <div class="role-card">
-                <h3>Digital Ambassadors</h3>
-                <p>Help us dominate the digital space. Share our official posters, policy graphics, and campaign updates on your Instagram, WhatsApp statuses, and TikTok to ensure our message reaches every youth in Seychelles.</p>
-            </div>
-            <div class="role-card">
-                <h3>On-The-Ground Team</h3>
-                <p>Politics happens in the real world. We need dedicated volunteers to distribute campaign flyers, place posters in highly visible local areas, and represent the campaign in your respective districts and schools.</p>
-            </div>
-            <div class="role-card">
-                <h3>Word of Mouth</h3>
-                <p>The most powerful political tool is a conversation. Talk to your friends, classmates, and peers about my vision for the 21st Cohort. Help them understand why their vote matters and how we are fighting for their future.</p>
-            </div>
-        </div>
-
-        <div class="action-box">
-            <h2>Ready to Step Up?</h2>
-            <p>Click the button below to send an official email to our campaign headquarters. Include your name, your district/school, and how you want to help. We will reply with your official Ambassador Starter Kit and digital posters.</p>
+        <div class="kit-section">
+            <h2>Ambassador Starter Kit</h2>
+            <p>I cannot do this alone. If we want to bring real youth empowerment and actionable policy to the SNYA, I need your help to spread the word. You don't need to sign up—just grab the materials below and start posting to your WhatsApp status, Instagram, and TikTok.</p>
             
-            <a href="mailto:vote@tyler-nicholas.online?subject=I want to volunteer for the Tyler Nicholas Campaign!&body=Hi Tyler,%0D%0A%0D%0AI want to join the team as a Campaign Ambassador for the 21st Cohort.%0D%0A%0D%0AMy Name:%0D%0AMy District/School:%0D%0AHow I want to help (Digital, Posters, etc.):%0D%0A%0D%0ALet me know the next steps!" class="btn-massive">Become An Ambassador</a>
+            <div class="kit-grid">
+                <div class="poster-area">
+                    <div class="poster-preview">
+                        <img src="https://i.ibb.co/Q7JyNqxt/Tyler-Nicholas-SNYC-Made-with-Poster-My-Wall.jpg" alt="Tyler Nicholas Official Campaign Poster">
+                    </div>
+                    <p class="poster-instructions">📱 Tap and hold the image to save it to your phone.</p>
+                </div>
+
+                <div class="caption-box">
+                    <h3>Copy & Paste Captions</h3>
+                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">Use this text when you post the poster on your social media:</p>
+                    
+                    <div class="caption-text">
+                        "Turning our voice into policy! 🇸🇨 I am supporting Tyler Nicholas for the 21st Cohort of the SNYA. If you are Seychellois and at EFS between 3ème and Terminale, make your vote count. Let's build our future together. 🚀 #TylerForSNYA #SeychellesYouth"
+                    </div>
+                    
+                    <div class="caption-text" style="margin-top: 1rem;">
+                        "Leadership isn't about titles, it's about action. Proud to back Tyler Nicholas for the SNYA 21st Cohort! Seychellois EFS students (3ème - Terminale), vote Tyler! 🇸🇨 Check out his vision: vote.tyler-nicholas.online"
+                    </div>
+                </div>
+            </div>
         </div>
 
     </section>
