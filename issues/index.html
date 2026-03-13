@@ -10,21 +10,44 @@
     <style>
         /* Specific tweaks for the Issues Page layout */
         .issues-header {
-            padding: 6rem 5% 4rem 5%;
+            position: relative;
+            padding: 7rem 5% 5rem 5%;
             text-align: center;
             background-color: var(--bg-dark-blue);
-            background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 60px, transparent 60px, transparent 120px);
+            overflow: hidden;
         }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/041/930/966/non_2x/flat-illustration-of-seychelles-national-flag-seychelles-flag-design-seychelles-wave-flag-free-vector.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
         .issues-header h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
             color: var(--white);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
         .issues-header p {
             color: var(--campaign-red);
-            font-size: 1.3rem;
-            font-weight: 600;
+            font-size: 1.4rem;
+            font-weight: 700;
             font-family: 'Montserrat', sans-serif;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+            font-style: italic;
         }
         
         .issue-block {
@@ -40,7 +63,7 @@
         /* Alternating layout for desktop */
         .issue-block:nth-child(even) {
             flex-direction: row-reverse;
-            background-color: #061129; /* Slightly different shade for alternating effect */
+            background-color: #061129;
         }
 
         .issue-text {
@@ -67,7 +90,7 @@
 
         .issue-text p {
             color: var(--text-light);
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             margin-bottom: 1.5rem;
             line-height: 1.8;
         }
@@ -80,14 +103,17 @@
         }
 
         .icon-circle {
-            width: 150px;
-            height: 150px;
+            width: 140px;
+            height: 140px;
             background-color: var(--card-bg);
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 4rem;
+            font-size: 3.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            color: var(--campaign-red);
             border: 4px solid var(--campaign-red);
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
@@ -149,44 +175,69 @@
             <li><a href="/issues/">Issues</a></li>
             <li><a href="mailto:vote@tyler-nicholas.online">Contact</a></li>
         </ul>
-        <a href="/volunteer/" class="btn-donate">Join Us</a>
+        <a href="mailto:vote@tyler-nicholas.online" class="btn-donate">Join Us</a>
     </nav>
 
     <header class="issues-header">
-        <h1>My Vision for Seychelles</h1>
-        <p>"Turning Your Voice Into Policy"</p>
+        <div class="hero-bg"></div>
+        <div class="header-content">
+            <h1>My Vision for Seychelles</h1>
+            <p>"Turning Your Voice Into Policy"</p>
+        </div>
     </header>
 
     <section class="issue-block">
         <div class="issue-text">
             <h2>Youth Empowerment</h2>
             <p>For too long, the decisions impacting our future have been made without us in the room. I am running for the 21st Cohort to ensure that young Seychellois are not just consulted, but actively involved in drafting the policies that affect our lives.</p>
-            <p>My goal is to bridge the gap between local communities and the National Assembly, creating direct channels for feedback, civic engagement, and leadership opportunities. When we empower the youth to lead today, we secure a stronger Seychelles for tomorrow.</p>
+            <p>My goal is to bridge the gap between local communities and the National Assembly, creating direct channels for feedback and civic engagement. Young people must not only be spoken about — we must be listened to.</p>
         </div>
         <div class="issue-icon">
-            <div class="icon-circle">🚀</div>
+            <div class="icon-circle">01</div>
         </div>
     </section>
 
     <section class="issue-block">
         <div class="issue-text">
-            <h2>Skill Development</h2>
-            <p>The global economy is evolving, and our education and training systems must keep pace. We need to move beyond traditional curriculums and focus on building pathways for technical skills, digital literacy, and entrepreneurship.</p>
-            <p>Drawing on my experience in digital services and enterprise management, I will advocate for programs that teach practical, modern skills. Whether it is web development, business management, or creative industries, our youth must be equipped with the tools to innovate and build their own success.</p>
+            <h2>Skill & Career Development</h2>
+            <p>The world is moving fast, and our education systems must keep pace. We need to focus on building actionable pathways for technical skills, digital literacy, and entrepreneurship so our youth are prepared for the modern economy.</p>
+            <p>I will push for greater access to practical platforms that help youth grow and succeed. Whether it is web development, business management, or the creative arts, our youth must be equipped with the tools to build their own success.</p>
         </div>
         <div class="issue-icon">
-            <div class="icon-circle">💡</div>
+            <div class="icon-circle">02</div>
         </div>
     </section>
 
     <section class="issue-block">
         <div class="issue-text">
-            <h2>Exchange Program</h2>
-            <p>Seychelles is deeply connected to the global community, and our youth deserve the opportunity to experience it firsthand. Cross-cultural learning broadens perspectives, inspires new ideas, and builds invaluable international networks.</p>
-            <p>I will champion the expansion of regional and international exchange programs, allowing our young leaders to collaborate with peers across the globe, share our unique Seychellois heritage, and bring world-class innovations back home to our communities.</p>
+            <h2>Local School Exchange Programs</h2>
+            <p>We do not always need to look past our borders to learn something new; there is incredible talent, knowledge, and innovation right here in Seychelles. We need to break down the silos between our local institutions.</p>
+            <p>I am advocating for a Local Exchange Program that allows schools across different districts to connect, collaborate, and learn from one another. By sharing resources, student leadership strategies, and academic ideas between our secondary and post-secondary schools, we will foster a more united and capable Seychellois youth.</p>
         </div>
         <div class="issue-icon">
-            <div class="icon-circle">🌍</div>
+            <div class="icon-circle">03</div>
+        </div>
+    </section>
+
+    <section class="issue-block">
+        <div class="issue-text">
+            <h2>District-Level Youth Action</h2>
+            <p>I believe youth engagement should not remain limited to national events or central discussions in Victoria. True change happens on the ground, in the neighborhoods where we live and interact every day.</p>
+            <p>I want to help build stronger district-based youth structures that work directly with communities. By decentralizing youth action, we ensure that young people in every area of Seychelles have the platform to participate, lead local initiatives, and make a visible impact.</p>
+        </div>
+        <div class="issue-icon">
+            <div class="icon-circle">04</div>
+        </div>
+    </section>
+
+    <section class="issue-block">
+        <div class="issue-text">
+            <h2>A Culture of Service & Patriotism</h2>
+            <p>I will stand for a generation that values country, community, and contribution. I believe patriotism is not just having pride in the flag — it is the willingness to serve the people standing behind it.</p>
+            <p>We need to cultivate a culture where community service is celebrated and supported. By investing in our next generation with seriousness, we can shape a Seychelles that sees youth not merely as spectators, but as the active builders of our nation's future.</p>
+        </div>
+        <div class="issue-icon">
+            <div class="icon-circle">05</div>
         </div>
     </section>
 
