@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Tyler Nicholas Campaign</title>
+    <link rel="icon" href="https://i0.wp.com/flag-shop.ca/wp-content/uploads/2024/11/img-flag-shop-flags-of-the-world-seychelles-flag-3-5.webp" type="image/webp">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        .error-section {
+            position: relative;
+            padding: 10rem 5%;
+            text-align: center;
+            background-color: var(--bg-dark-blue);
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/041/930/966/non_2x/flat-illustration-of-seychelles-national-flag-seychelles-flag-design-seychelles-wave-flag-free-vector.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .error-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .error-content h1 {
+            font-size: 6rem;
+            color: var(--campaign-red);
+            margin-bottom: 0.5rem;
+            line-height: 1;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .error-content h2 {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .error-content p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .btn-massive {
+            display: inline-block;
+            background-color: var(--campaign-red);
+            color: var(--white);
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            transition: transform 0.2s, background-color 0.3s;
+            box-shadow: 0 5px 15px rgba(230, 0, 38, 0.4);
+        }
+
+        .btn-massive:hover {
+            background-color: #cc0022;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .error-content h1 {
+                font-size: 4rem;
+            }
+            .error-content h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="vote-logo">V<span class="check">✓</span>TE</span> <span class="tyler-text">Tyler Nicholas</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">Meet Tyler</a></li>
+            <li><a href="/issues/">Issues</a></li>
+            <li><a href="mailto:vote@tyler-nicholas.online">Contact</a></li>
+        </ul>
+        <a href="/volunteer/" class="btn-donate">Join Us</a>
+    </nav>
+
+    <section class="error-section">
+        <div class="hero-bg"></div>
+        <div class="error-content">
+            <h1>404</h1>
+            <h2>This Page is Missing.</h2>
+            <p>Looks like this link got lost in bureaucracy. We couldn't find the page you were looking for, but our vision for the Seychellois youth is right on track.</p>
+            <a href="/" class="btn-massive">Back to the Campaign Trail</a>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">V✓TE Tyler Nicholas</div>
+            <div class="footer-links">
+                <a href="/">Home</a> | 
+                <a href="/about/">Meet Tyler</a> | 
+                <a href="mailto:vote@tyler-nicholas.online">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Tyler Nicholas Campaign. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
