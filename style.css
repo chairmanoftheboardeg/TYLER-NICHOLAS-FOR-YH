@@ -1,7 +1,7 @@
 /* Base Styles & Premium Campaign Colors */
 :root {
-    --bg-dark-blue: #0A1B3F; /* Deep premium navy */
-    --campaign-red: #E60026; /* Bright punchy red */
+    --bg-dark-blue: #0A1B3F;
+    --campaign-red: #E60026;
     --white: #ffffff;
     --text-light: #d1d5db;
     --card-bg: #112652;
@@ -41,6 +41,8 @@ h1, h2, h3, h4, .logo {
     align-items: center;
     padding: 1.5rem 5%;
     background-color: transparent;
+    position: relative;
+    z-index: 10;
 }
 
 .logo {
@@ -93,13 +95,25 @@ h1, h2, h3, h4, .logo {
     background-color: #cc0022;
 }
 
-/* Hero Section with Striped Background */
+/* Hero Section */
 .hero {
     position: relative;
     padding: 4rem 5% 0 5%;
-    /* Creates the vertical faint stripes from your reference image */
-    background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 60px, transparent 60px, transparent 120px);
+    background-color: var(--bg-dark-blue);
     overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/041/930/966/non_2x/flat-illustration-of-seychelles-national-flag-seychelles-flag-design-seychelles-wave-flag-free-vector.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15; /* Keeps the flag visible without overpowering the text */
+    z-index: 1;
 }
 
 .hero-content {
@@ -108,6 +122,8 @@ h1, h2, h3, h4, .logo {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-text {
@@ -121,6 +137,7 @@ h1, h2, h3, h4, .logo {
     line-height: 1.1;
     margin-bottom: 1.5rem;
     font-weight: 800;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Helps text stand out against the flag */
 }
 
 .hero-text p {
@@ -128,6 +145,7 @@ h1, h2, h3, h4, .logo {
     color: var(--text-light);
     margin-bottom: 2.5rem;
     max-width: 500px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
 
 .btn-primary {
@@ -160,7 +178,6 @@ h1, h2, h3, h4, .logo {
     max-height: 650px;
     object-fit: contain;
     display: block;
-    /* Tricks to make the image look sharper */
     image-rendering: -webkit-optimize-contrast;
     filter: contrast(1.05) saturate(1.05) drop-shadow(0px 10px 20px rgba(0,0,0,0.5));
 }
@@ -168,7 +185,9 @@ h1, h2, h3, h4, .logo {
 /* Principles Section */
 .principles-section {
     padding: 5rem 5%;
-    background-color: #061129; /* Slightly darker than hero for contrast */
+    background-color: #061129;
+    position: relative;
+    z-index: 2;
 }
 
 .principles-grid {
@@ -185,17 +204,13 @@ h1, h2, h3, h4, .logo {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    border-bottom: 4px solid var(--campaign-red);
-}
-
-.card .icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    border-top: 4px solid var(--campaign-red); /* Kept a clean accent border since emojis are gone */
 }
 
 .card h4 {
     font-size: 1.3rem;
     margin-bottom: 1rem;
+    color: var(--white);
 }
 
 .card p {
@@ -206,7 +221,7 @@ h1, h2, h3, h4, .logo {
 /* Footer Section */
 .site-footer {
     background-color: #030814;
-    padding: 4rem 5% 1rem 5%;
+    padding: 4rem 5% 2rem 5%;
     text-align: center;
 }
 
@@ -219,16 +234,7 @@ h1, h2, h3, h4, .logo {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
     font-weight: 800;
-    margin-bottom: 1rem;
-}
-
-.footer-content p {
-    color: var(--text-light);
-    font-size: 0.9rem;
     margin-bottom: 1.5rem;
-    border: 1px solid rgba(255,255,255,0.2);
-    display: inline-block;
-    padding: 0.5rem 1rem;
 }
 
 .footer-links a {
