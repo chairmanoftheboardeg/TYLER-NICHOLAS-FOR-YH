@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Specific tweaks for the About Page layout */
         .about-header {
             padding: 6rem 5% 3rem 5%;
             text-align: center;
@@ -18,17 +17,29 @@
             font-size: 3.5rem;
             margin-bottom: 1rem;
         }
+        .hero-quote {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--campaign-red);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.5;
+        }
         .about-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 5% 6rem 5%;
+        }
+        .intro-section {
             display: flex;
             align-items: flex-start;
-            gap: 4rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 5% 6rem 5%;
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
         .about-image {
             flex: 1;
-            max-width: 400px;
+            max-width: 300px;
         }
         .about-image img {
             width: 100%;
@@ -36,43 +47,79 @@
             border-bottom: 5px solid var(--campaign-red);
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
-        .about-content {
+        .intro-text {
             flex: 2;
         }
-        .about-content h2 {
+        .content-section {
+            margin-bottom: 3rem;
+        }
+        .content-section h2 {
             font-size: 2rem;
-            margin-bottom: 1.5rem;
             color: var(--campaign-red);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+            padding-bottom: 0.5rem;
         }
-        .about-content p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+        p {
+            font-size: 1.15rem;
             color: var(--text-light);
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
         }
-        .experience-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
+        .linkedin-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            background-color: #0077b5; /* LinkedIn Blue */
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: opacity 0.3s;
         }
-        .exp-box {
+        .linkedin-link:hover {
+            opacity: 0.8;
+        }
+        .fight-list {
+            list-style: none;
+        }
+        .fight-list li {
+            margin-bottom: 1.5rem;
             background: var(--card-bg);
-            padding: 2rem;
-            border-radius: 8px;
+            padding: 1.5rem;
             border-left: 4px solid var(--campaign-red);
+            border-radius: 4px;
         }
-        .exp-box h3 {
+        .fight-list h3 {
+            color: var(--white);
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
+        }
+        .fight-list p {
+            margin-bottom: 0;
+            font-size: 1.05rem;
+        }
+        .closing-line {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
             color: var(--white);
+            margin-top: 4rem;
+            padding: 2rem;
+            background-color: var(--campaign-red);
+            border-radius: 8px;
         }
         @media (max-width: 768px) {
-            .about-container {
+            .intro-section {
                 flex-direction: column;
                 align-items: center;
+                text-align: center;
             }
-            .experience-grid {
-                grid-template-columns: 1fr;
+            .about-header h1 {
+                font-size: 2.8rem;
+            }
+            .hero-quote {
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -89,47 +136,77 @@
             <li><a href="/issues/">Issues</a></li>
             <li><a href="mailto:vote@tyler-nicholas.online">Contact</a></li>
         </ul>
-        <a href="/volunteer/" class="btn-donate">Join Us</a>
+        <a href="mailto:vote@tyler-nicholas.online" class="btn-donate">Join Us</a>
     </nav>
 
     <header class="about-header">
-        <h1>Meet Tyler Nicholas</h1>
-        <p style="color: var(--text-light); font-size: 1.2rem;">Entrepreneur, Community Advocate, and Your Voice for the 21st Cohort.</p>
+        <h1>Meet Tyler</h1>
+        <div class="hero-quote">
+            “I do not seek this seat for status — I seek it to serve Seychelles, strengthen youth voice, and help shape the future our generation deserves.”
+        </div>
     </header>
 
     <section class="about-container">
-        <div class="about-image">
-            <img src="https://media.licdn.com/dms/image/v2/D4D03AQGRKh3DGxSABQ/profile-displayphoto-scale_400_400/B4DZr4z1B9GwAg-/0/1765110932319?e=1774483200&v=beta&t=kfbgGyoPquwXygrYf0wrgOBTe-Mu4JydRJcYd3WKm4g" alt="Tyler Nicholas Headshot">
-        </div>
         
-        <div class="about-content">
-            <h2>A Proven Record of Leadership</h2>
-            <p>I believe that the youth of Seychelles are not just the leaders of tomorrow—we are the innovators and change-makers of today. My journey into public service is rooted in a deep commitment to building scalable solutions that empower our communities, drive economic growth, and foster digital literacy.</p>
-            
-            <p>I have dedicated my early career to business development and community welfare. By turning ideas into actionable policies, I want to ensure that every young Seychellois has the tools, skills, and opportunities to succeed on the global stage.</p>
-
-            <div class="experience-grid">
-                <div class="exp-box">
-                    <h3>Business & Innovation</h3>
-                    <p>As the driving force behind the Tyler Nicholas Group, alongside co-founder Kareem Malhas, I manage dynamic subsidiaries like Falcon LTD and Blackwood Digital Services. This hands-on entrepreneurial experience shapes my practical approach to economic empowerment.</p>
-                </div>
-                
-                <div class="exp-box">
-                    <h3>Community Action</h3>
-                    <p>Leadership means serving the community. Through the Tyler Nicholas Foundation and active engagement with FoodShare Seychelles, I work directly to tackle local challenges and advocate for youth-led innovations, such as Christie Esparon's project, Pretty Dazzle.</p>
-                </div>
-
-                <div class="exp-box">
-                    <h3>Digital Ecosystems</h3>
-                    <p>Combining my passion for aviation—specifically the B777—with digital management, I have built and led large-scale virtual communities including Air Seychelles Roblox and the Emirates Group Roblox (featuring Fly Dubai). These platforms are modern classrooms for youth leadership and digital literacy.</p>
-                </div>
-
-                <div class="exp-box">
-                    <h3>Vision for the SNYA</h3>
-                    <p>In the Seychelles National Youth Assembly, I will leverage this background to champion Skill Development and International Exchange Programs, turning our collective voices into concrete policy.</p>
+        <div class="intro-section">
+            <div class="about-image">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQGRKh3DGxSABQ/profile-displayphoto-scale_400_400/B4DZr4z1B9GwAg-/0/1765110932319?e=1774483200&v=beta&t=kfbgGyoPquwXygrYf0wrgOBTe-Mu4JydRJcYd3WKm4g" alt="Tyler Nicholas">
+            </div>
+            <div class="intro-text">
+                <div class="content-section" style="margin-bottom: 0;">
+                    <h2>Who I Am</h2>
+                    <p>My name is Tyler Nicholas. I am a 17-year-old high school student and a young Seychellois who believes deeply in service, leadership, and national development.</p>
+                    <p>I am proud of my country, proud of its people, and proud to stand for a generation that is ready not only to dream of a better Seychelles, but to help build it. I am running for the 21st Cohort of the Seychelles National Youth Assembly because I believe youth representation must be serious, purposeful, and driven by action. I do not believe in empty words. I believe in responsibility, vision, and results.</p>
                 </div>
             </div>
         </div>
+
+        <div class="content-section">
+            <h2>What I Have Done</h2>
+            <p>Throughout my journey, I have taken leadership seriously. I have built and led initiatives, managed communities, supported projects, and worked to create opportunities for others. My experience in leadership, community engagement, and digital spaces has taught me how to organize, communicate, and turn ideas into action.</p>
+            <p>I have consistently believed that leadership is not about titles alone — it is about initiative, discipline, and the willingness to step forward when something needs to be done. Whether through youth-focused initiatives, community involvement, or the development of projects that encourage growth and participation, I have always aimed to lead with purpose.</p>
+            <a href="https://www.linkedin.com/in/tyler-nicholas-62999534a" target="_blank" class="linkedin-link">View My Full Background on LinkedIn</a>
+        </div>
+
+        <div class="content-section">
+            <h2>Why I Care</h2>
+            <p>I care because I love Seychelles, and I believe that serving one’s country is one of the highest responsibilities a young person can take on.</p>
+            <p>I care because too many young people feel unheard, overlooked, or disconnected from the decisions that shape their future.</p>
+            <p>I care because youth are too often told to wait their turn, when in reality we already have the ideas, the energy, and the potential to contribute meaningfully to national life.</p>
+            <p>I care because I want to help build a Seychelles where young people are not only represented, but respected — not only included, but empowered.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>What I Will Fight For</h2>
+            <ul class="fight-list">
+                <li>
+                    <h3>A stronger youth voice</h3>
+                    <p>I will fight for youth to have a more meaningful place in national conversations, community planning, and decision-making. Young people must not only be spoken about — they must be listened to.</p>
+                </li>
+                <li>
+                    <h3>Real opportunities for young people</h3>
+                    <p>I will push for greater access to leadership opportunities, skills development, community initiatives, and practical platforms that help youth grow, contribute, and succeed.</p>
+                </li>
+                <li>
+                    <h3>District-level youth action</h3>
+                    <p>I believe youth engagement should not remain limited to national events or central discussions. I want stronger district-based youth structures that work with communities directly, so young people in every area can participate, lead, and make an impact.</p>
+                </li>
+                <li>
+                    <h3>A culture of service and patriotism</h3>
+                    <p>I will stand for a generation that values country, community, and contribution. I believe patriotism is not just pride in the flag — it is the willingness to serve the people behind it.</p>
+                </li>
+                <li>
+                    <h3>A future-focused Seychelles</h3>
+                    <p>I want to help shape a Seychelles that invests in its next generation with seriousness: a country that sees youth not as spectators, but as builders of the future.</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="closing-line">
+            I am not running simply to hold a position. I am running to represent, to serve, and to stand for the young people of Seychelles with conviction, dignity, and purpose.<br><br>
+            Vote Tyler Nicholas.
+        </div>
+
     </section>
 
     <footer class="site-footer">
