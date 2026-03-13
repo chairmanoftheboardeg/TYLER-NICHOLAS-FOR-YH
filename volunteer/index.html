@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Team | Tyler Nicholas Campaign</title>
+    <link rel="icon" href="https://i0.wp.com/flag-shop.ca/wp-content/uploads/2024/11/img-flag-shop-flags-of-the-world-seychelles-flag-3-5.webp" type="image/webp">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Specific tweaks for the Volunteer Page layout */
+        .volunteer-header {
+            position: relative;
+            padding: 7rem 5% 5rem 5%;
+            text-align: center;
+            background-color: var(--bg-dark-blue);
+            overflow: hidden;
+            border-bottom: 5px solid var(--campaign-red);
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/041/930/966/non_2x/flat-illustration-of-seychelles-national-flag-seychelles-flag-design-seychelles-wave-flag-free-vector.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .volunteer-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+        .volunteer-header p {
+            color: var(--campaign-red);
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+
+        .volunteer-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 5rem 5%;
+        }
+
+        .pitch-section {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .pitch-section h2 {
+            font-size: 2.2rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .pitch-section p {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .role-card {
+            background-color: var(--card-bg);
+            padding: 2.5rem 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 4px solid var(--campaign-red);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .role-card h3 {
+            font-size: 1.4rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .role-card p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .action-box {
+            background-color: #061129;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .action-box h2 {
+            font-size: 2rem;
+            color: var(--campaign-red);
+            margin-bottom: 1rem;
+        }
+
+        .action-box p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .btn-massive {
+            display: inline-block;
+            background-color: var(--campaign-red);
+            color: var(--white);
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 4px;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            transition: transform 0.2s, background-color 0.3s;
+            box-shadow: 0 5px 15px rgba(230, 0, 38, 0.4);
+        }
+
+        .btn-massive:hover {
+            background-color: #cc0022;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .volunteer-header h1 {
+                font-size: 2.8rem;
+            }
+            .roles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <span class="vote-logo">V<span class="check">✓</span>TE</span> <span class="tyler-text">Tyler Nicholas</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">Meet Tyler</a></li>
+            <li><a href="/issues/">Issues</a></li>
+            <li><a href="mailto:vote@tyler-nicholas.online">Contact</a></li>
+        </ul>
+        <a href="/volunteer/" class="btn-donate">Join Us</a>
+    </nav>
+
+    <header class="volunteer-header">
+        <div class="hero-bg"></div>
+        <div class="header-content">
+            <h1>Join the Movement</h1>
+            <p>Become a Campaign Ambassador today.</p>
+        </div>
+    </header>
+
+    <section class="volunteer-container">
+        
+        <div class="pitch-section">
+            <h2>I Cannot Do This Alone.</h2>
+            <p>A true grassroots campaign is built by the people it aims to serve. If we want to bring real youth empowerment, skill development, and strong local leadership to the 21st Cohort of the Seychelles National Youth Assembly, we need a team willing to put in the work.</p>
+        </div>
+
+        <div class="roles-grid">
+            <div class="role-card">
+                <h3>Digital Ambassadors</h3>
+                <p>Help us dominate the digital space. Share our official posters, policy graphics, and campaign updates on your Instagram, WhatsApp statuses, and TikTok to ensure our message reaches every youth in Seychelles.</p>
+            </div>
+            <div class="role-card">
+                <h3>On-The-Ground Team</h3>
+                <p>Politics happens in the real world. We need dedicated volunteers to distribute campaign flyers, place posters in highly visible local areas, and represent the campaign in your respective districts and schools.</p>
+            </div>
+            <div class="role-card">
+                <h3>Word of Mouth</h3>
+                <p>The most powerful political tool is a conversation. Talk to your friends, classmates, and peers about my vision for the 21st Cohort. Help them understand why their vote matters and how we are fighting for their future.</p>
+            </div>
+        </div>
+
+        <div class="action-box">
+            <h2>Ready to Step Up?</h2>
+            <p>Click the button below to send an official email to our campaign headquarters. Include your name, your district/school, and how you want to help. We will reply with your official Ambassador Starter Kit and digital posters.</p>
+            
+            <a href="mailto:vote@tyler-nicholas.online?subject=I want to volunteer for the Tyler Nicholas Campaign!&body=Hi Tyler,%0D%0A%0D%0AI want to join the team as a Campaign Ambassador for the 21st Cohort.%0D%0A%0D%0AMy Name:%0D%0AMy District/School:%0D%0AHow I want to help (Digital, Posters, etc.):%0D%0A%0D%0ALet me know the next steps!" class="btn-massive">Become An Ambassador</a>
+        </div>
+
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-logo">V✓TE Tyler Nicholas</div>
+            <div class="footer-links">
+                <a href="/">Home</a> | 
+                <a href="/about/">Meet Tyler</a> | 
+                <a href="mailto:vote@tyler-nicholas.online">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Tyler Nicholas Campaign. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
